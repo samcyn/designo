@@ -1,42 +1,40 @@
-# Nuxt 3 Minimal Starter
+## Overview
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+### Screenshot
 
-## Setup
+![](./screenshot.jpg)
 
-Make sure to install the dependencies:
+Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
-```bash
-# yarn
-yarn install
+Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
 
-# npm
-npm install
+Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
 
-# pnpm
-pnpm install
-```
+**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
-## Development Server
+### Links
 
-Start the development server on `http://localhost:3000`
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-```bash
-npm run dev
-```
 
-## Production
+### Built with
 
-Build the application for production:
+- Semantic HTML5 markup
+- CSS custom properties
+- Mobile-first workflow
+- [NuxtJS](https://reactjs.org/) - JS framework
+- [Tailwind CSS](https://twitter.com/samcyn007) - CSS framework
 
-```bash
-npm run build
-```
 
-Locally preview production build:
 
-```bash
-npm run preview
-```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Author
+
+- Website - [Samson Iyanda](https://samsoniyanda.vercel.app/)
+- Frontend Mentor - [@samcyn](https://www.frontendmentor.io/profile/samcyn)
+- Twitter - [@samcyn007](https://twitter.com/samcyn007)
+
+
+
+
