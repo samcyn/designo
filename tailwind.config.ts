@@ -21,12 +21,12 @@ module.exports = {
     colors: {
       transparent: "transparent",
       current: "currentColor",
-      red: "#cd2c2c",
       peach: "#E7816B",
       ['peach-light']: "#FFAD9B",
       black: "#1D1C1E",
       ['dark-grey']: "#333136",
       ['light-grey']: "#F1F3F5",
+      white: "#ffffff",
     },
     extend: {
       spacing: {
@@ -38,6 +38,17 @@ module.exports = {
         "50": "200px",
         "75": "300px",
         "100": "400px",
+      },
+      letterSpacing: {
+        '2px': '2px',
+      },
+      lineHeight: {
+        '14px': '14px',
+        '25px': '25px',
+      },
+      fontSize: {
+        '14px': '14px',
+        '24px': '24px'
       },
     },
   },

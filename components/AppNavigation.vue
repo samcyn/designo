@@ -1,19 +1,25 @@
 <script setup lang="ts">
-import AppButton from '~/components/shared/AppButton.vue';
-import AppBrandLogo from '~/components/shared/AppBrandLogo.vue';
-import AppLink from '~/components/shared/AppLink.vue';
+import AppButton from "~/components/shared/AppButton.vue";
+import AppBrandLogo from "~/components/shared/AppBrandLogo.vue";
+import AppLink from "~/components/shared/AppLink.vue";
+import AppIconButton from "~/components/shared/AppIconButton.vue";
 
 const expandClass =
 	ref(false);
+
+const onExpand = () => {
+	expandClass.value =
+		!expandClass.value;
+};
 </script>
 
 <template>
 	<header
 		class="relative bg-white z-10"
 	>
-		<div class="container">
+		<div class="container relative">
 			<nav
-				class="header__nav flex flex-wrap md:flex-nowrap items-center lg:items-center px-2 py-7 md:px-6 md:py-4 xl:px-0"
+				class="header__nav flex flex-wrap md:flex-nowrap items-center lg:items-center py-9 md:px-4 md:py-16 xl:px-0"
 				aria-label="Main navigation"
 			>
 				<app-brand-logo
@@ -24,25 +30,22 @@ const expandClass =
 				<div
 					class="flex text-black ml-auto md:hidden"
 				>
-					{ expandClass ? (
 					<app-icon-button
+						v-if="expandClass"
 						icon="close"
-						width="16"
-						height="15"
-						viewBox="0 0 16 15"
-						color="none"
-						onClick="{onExpand}"
-					/>
-					) : (
-					<app-icon-button
-						icon="hamburger"
 						width="20"
-						height="6"
-						viewBox="0 0 20 6"
-						color="none"
-						onClick="{onExpand}"
+						height="20"
+						class-name="text-black border-0 outline-0"
+						@click="onExpand"
 					/>
-					) }
+					<app-icon-button
+						v-else
+						icon="hamburger"
+						width="24"
+						height="20"
+						class-name="text-black border-0 outline-0"
+						@click="onExpand"
+					/>
 				</div>
 
 				<div
@@ -50,53 +53,29 @@ const expandClass =
 						expandClass
 							? 'md:flex'
 							: 'hidden md:flex'
-					} basis-full md:basis-auto mt-7 md:mt-0 pt-8 pr-2 pb-1
-          md:pt-0 md:pr-0 md:pb-0 flex-grow items-center justify-between`"
+					} basis-full md:basis-auto 
+						px-6 py-12
+          	md:px-0 md:py-0 
+						flex-grow items-center justify-between
+						bg-black md:bg-white
+						absolute md:relative
+						left-0 right-0 top-24 md:inset-auto w-full md:w-auto
+						`
+					"
 				>
 					<ul
-						class="flex flex-wrap md:flex-grow md:justify-center p-0 m-0 list-none flex-row gap-5 md:gap-9 mb-5 md:mb-0"
+						class="flex flex-wrap flex-row md:flex-grow md:justify-end p-0 m-0 list-none gap-8 md:gap-10"
 					>
-						<li
-							class="flex justify-center text-center basis-full md:basis-auto"
-						>
-							<app-link
-								to="/about"
-								class="flex text-black text-xs font-bold uppercase tracking-2px m-0 hover:text-black/30 py-1.5px"
-								activeclass="!text-orange"
-								>Stories</app-link
-							>
-						</li>
-						<li
-							class="flex justify-center text-center basis-full md:basis-auto"
-						>
-							<app-link
-								to="/contact"
-								class="flex text-black text-xs font-bold uppercase tracking-2px m-0 hover:text-black/30 py-1.5px"
-								activeclass="!text-orange"
-								>Features</app-link
-							>
-						</li>
-						<li
-							class="flex justify-center text-center basis-full md:basis-auto"
-						>
-							<app-link
-								to="/location"
-								class="flex text-black text-xs font-bold uppercase tracking-2px m-0 hover:text-black/30 py-1.5px"
-								activeclass="!text-orange"
-								>Pricing</app-link
-							>
-						</li>
+						<app-navigation-menu to="/about">
+							Our Company
+						</app-navigation-menu>
+						<app-navigation-menu to="/locations">
+							Locations
+						</app-navigation-menu>
+						<app-navigation-menu to="/contact">
+							Contact
+						</app-navigation-menu>
 					</ul>
-					
-					<div
-						class="md:flex"
-					>
-						<app-button
-							class="uppercase w-full justify-center"
-						>
-							Get An Invite
-						</app-button>
-					</div>
 				</div>
 			</nav>
 		</div>

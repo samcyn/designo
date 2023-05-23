@@ -7,18 +7,15 @@ export enum IconEnums {
   instagram = 'Instagram',
   'arrow-forward-right' = 'Arrow Forward Right',
   check = 'Check Arrow',
+  close = 'Close'
 }
 
 export type IconTypes = keyof typeof IconEnums;
 
-const Hamburger = `<g
-  fill="currentColor"
-  fill-rule="evenodd"
->
-  <path
-    d="M0 0h16v3H0zM0 6h16v3H0zM0 12h16v3H0z"
-  />
-</g>`;
+const Hamburger = `
+  <g fill="currentColor" fill-rule="evenodd">
+  <path d="M0 0h24v4H0zM0 8h24v4H0zM0 16h24v4H0z"/></g>
+`;
 
 const Cart = `
 <path
@@ -49,6 +46,10 @@ const ArrowForwardRight = `<path d="M6.23 20.23 8 22l10-10L8 2 6.23 3.77 14.46 1
 
 const CheckArrow = `<path d="M1.75391 11.3328L8.50542 18.0843L24.3085 2.28125" stroke="currentColor" stroke-width="4"/>`;
 
+const Close = `
+  <path d="M17.071.1L19.9 2.93l-7.071 7.07 7.071 7.072-2.828 2.828L10 12.828l-7.071 7.071L.1 17.071 7.17 10 .102 2.929 2.929.1l7.07 7.07 7.072-7.07z" fill="currentColor" fill-rule="evenodd"/>
+`;
+
 const IconsLibrary: Record<IconTypes, string> = {
   hamburger: Hamburger,
   cart: Cart,
@@ -58,6 +59,7 @@ const IconsLibrary: Record<IconTypes, string> = {
   twitter: Twitter,
   'arrow-forward-right': ArrowForwardRight,
   check: CheckArrow,
+  close: Close,
 };
 
 export default IconsLibrary;
