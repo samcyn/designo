@@ -1,58 +1,102 @@
 <script setup lang="ts">
-// import AppBrandLogo from '../shared/AppBrandLogo.vue';
-// import AppIconButton from '../shared/AppIconButton.vue';
-// import AppMenus from '../shared/AppMenus.vue';
-
-// import { useCart } from '../../hooks/useCart';
-
-// const { onShowCart } = useCart();
+const expandClass =
+	ref(false);
 </script>
 
 <template>
-  <header class="relative bg-black-60 z-10">
-    <div class="container m-auto">
-      <nav
-        class="header__nav flex flex-nowrap items-center lg:items-start pt-8 pb-8 lg:pb-9"
-        aria-label="Main navigation"
-      >
-        <!-- hamburger bar starts -->
-        <div class="flex mr-auto lg:hidden">
-          <!-- <app-icon-button icon="hamburger" width="16" height="15" /> -->
-        </div>
-        <!-- hamburger bar ends -->
+	<header
+		class="relative bg-white z-10"
+	>
+		<div class="container">
+			<nav
+				class="header__nav flex flex-wrap md:flex-nowrap items-center lg:items-center px-2 py-7 md:px-6 md:py-4 xl:px-0"
+				aria-label="Main navigation"
+			>
+				<AppBrandLogo
+					class="logo"
+					aria-label="audioPhile"
+				/>
 
-        <!-- logo/brand starts -->
-        <!-- <app-brand-logo class="logo" aria-label="audioPhile" /> -->
-        <!-- logo/brand ends -->
+				<div
+					class="flex text-black ml-auto md:hidden"
+				>
+					{ expandClass ? (
+					<AppIconButton
+						icon="close"
+						width="16"
+						height="15"
+						viewBox="0 0 16 15"
+						color="none"
+						onClick="{onExpand}"
+					/>
+					) : (
+					<AppIconButton
+						icon="hamburger"
+						width="20"
+						height="6"
+						viewBox="0 0 20 6"
+						color="none"
+						onClick="{onExpand}"
+					/>
+					) }
+				</div>
 
-        <!-- menus starts -->
-        <div class="hidden lg:flex flex-grow items-center justify-center">
-          <!-- <app-menus /> -->
-        </div>
-        <!-- menus ended -->
-
-        <!-- carts starts -->
-        <div class="flex ml-auto">
-          <!-- <app-icon-button icon="cart" width="23" height="20" @click="onShowCart" /> -->
-        </div>
-        <!-- cart ends -->
-      </nav>
-    </div>
-  </header>
+				<div
+					:class="`${
+						expandClass
+							? 'md:flex'
+							: 'hidden md:flex'
+					} basis-full md:basis-auto mt-7 md:mt-0 pt-8 pr-2 pb-1
+          md:pt-0 md:pr-0 md:pb-0 flex-grow items-center justify-between`"
+				>
+					<ul
+						class="flex flex-wrap md:flex-grow md:justify-center p-0 m-0 list-none flex-row gap-5 md:gap-9 mb-5 md:mb-0"
+					>
+						<li
+							class="flex justify-center text-center basis-full md:basis-auto"
+						>
+							<AppLink
+								to="/stories"
+								class="flex text-black text-xs font-bold uppercase tracking-2px m-0 hover:text-black/30 py-1.5px"
+								activeclass="!text-orange"
+								>Stories</AppLink
+							>
+						</li>
+						<li
+							class="flex justify-center text-center basis-full md:basis-auto"
+						>
+							<AppLink
+								to="/features"
+								class="flex text-black text-xs font-bold uppercase tracking-2px m-0 hover:text-black/30 py-1.5px"
+								activeclass="!text-orange"
+								>Features</AppLink
+							>
+						</li>
+						<li
+							class="flex justify-center text-center basis-full md:basis-auto"
+						>
+							<AppLink
+								to="/pricing"
+								class="flex text-black text-xs font-bold uppercase tracking-2px m-0 hover:text-black/30 py-1.5px"
+								activeclass="!text-orange"
+								>Pricing</AppLink
+							>
+						</li>
+					</ul>
+					{/* action button
+					*/}
+					<div
+						class="md:flex"
+					>
+						<AppButton
+							class="uppercase w-full justify-center"
+						>
+							Get An Invite
+						</AppButton>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
 </template>
-<style scoped>
-.logo {
-  padding: 0;
-}
-.header__nav {
-  --tw-shadow: 0 1px 0px 0px rgba(255, 255, 255, 0.2);
-  --tw-shadow-colored: 0 1px 0px 0px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
-    var(--tw-shadow);
-}
-@media (min-width: 1024px) {
-  .logo {
-    padding: 1.5px 0;
-  }
-}
-</style>
+<style scoped></style>
