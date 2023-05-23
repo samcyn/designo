@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import AppButton from '~/components/shared/AppButton.vue';
+import AppBrandLogo from '~/components/shared/AppBrandLogo.vue';
+import AppLink from '~/components/shared/AppLink.vue';
+
 const expandClass =
 	ref(false);
 </script>
@@ -12,7 +16,7 @@ const expandClass =
 				class="header__nav flex flex-wrap md:flex-nowrap items-center lg:items-center px-2 py-7 md:px-6 md:py-4 xl:px-0"
 				aria-label="Main navigation"
 			>
-				<AppBrandLogo
+				<app-brand-logo
 					class="logo"
 					aria-label="audioPhile"
 				/>
@@ -21,7 +25,7 @@ const expandClass =
 					class="flex text-black ml-auto md:hidden"
 				>
 					{ expandClass ? (
-					<AppIconButton
+					<app-icon-button
 						icon="close"
 						width="16"
 						height="15"
@@ -30,7 +34,7 @@ const expandClass =
 						onClick="{onExpand}"
 					/>
 					) : (
-					<AppIconButton
+					<app-icon-button
 						icon="hamburger"
 						width="20"
 						height="6"
@@ -55,44 +59,43 @@ const expandClass =
 						<li
 							class="flex justify-center text-center basis-full md:basis-auto"
 						>
-							<AppLink
-								to="/stories"
+							<app-link
+								to="/about"
 								class="flex text-black text-xs font-bold uppercase tracking-2px m-0 hover:text-black/30 py-1.5px"
 								activeclass="!text-orange"
-								>Stories</AppLink
+								>Stories</app-link
 							>
 						</li>
 						<li
 							class="flex justify-center text-center basis-full md:basis-auto"
 						>
-							<AppLink
-								to="/features"
+							<app-link
+								to="/contact"
 								class="flex text-black text-xs font-bold uppercase tracking-2px m-0 hover:text-black/30 py-1.5px"
 								activeclass="!text-orange"
-								>Features</AppLink
+								>Features</app-link
 							>
 						</li>
 						<li
 							class="flex justify-center text-center basis-full md:basis-auto"
 						>
-							<AppLink
-								to="/pricing"
+							<app-link
+								to="/location"
 								class="flex text-black text-xs font-bold uppercase tracking-2px m-0 hover:text-black/30 py-1.5px"
 								activeclass="!text-orange"
-								>Pricing</AppLink
+								>Pricing</app-link
 							>
 						</li>
 					</ul>
-					{/* action button
-					*/}
+					
 					<div
 						class="md:flex"
 					>
-						<AppButton
+						<app-button
 							class="uppercase w-full justify-center"
 						>
 							Get An Invite
-						</AppButton>
+						</app-button>
 					</div>
 				</div>
 			</nav>

@@ -22,6 +22,11 @@ module.exports = {
       transparent: "transparent",
       current: "currentColor",
       red: "#cd2c2c",
+      peach: "#E7816B",
+      ['peach-light']: "#FFAD9B",
+      black: "#1D1C1E",
+      ['dark-grey']: "#333136",
+      ['light-grey']: "#F1F3F5",
     },
     extend: {
       spacing: {
