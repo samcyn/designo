@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import AppHero from '~/components/shared/AppHero.vue';
+
+</script>
 <template>
-  <h1>Hello 1</h1>
+  <app-hero />
 </template>

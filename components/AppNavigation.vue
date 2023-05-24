@@ -15,7 +15,7 @@ const onExpand = () => {
 
 <template>
 	<header
-		class="relative bg-white z-10"
+		class="relative bg-white z-50"
 	>
 		<div class="container relative">
 			<nav
