@@ -2,7 +2,7 @@
 import AppButton from "./AppButton.vue";
 </script>
 <template>
-	<div class="container md:px-10 xl:px-6">
+	<div class="container">
 		<div
 			role="banner"
 			class="banner relative bg-peach overflow-hidden -mx-6 px-6 md:mx-0 md:px-0"

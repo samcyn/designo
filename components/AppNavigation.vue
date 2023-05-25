@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import AppButton from "~/components/shared/AppButton.vue";
 import AppBrandLogo from "~/components/shared/AppBrandLogo.vue";
-import AppLink from "~/components/shared/AppLink.vue";
 import AppIconButton from "~/components/shared/AppIconButton.vue";
 
 const expandClass =
@@ -19,7 +17,7 @@ const onExpand = () => {
 	>
 		<div class="container relative">
 			<nav
-				class="header__nav flex flex-wrap md:flex-nowrap items-center lg:items-center py-9 md:px-4 md:py-16 xl:px-0"
+				class="header__nav flex flex-wrap md:flex-nowrap items-center lg:items-center py-9 md:py-16 xl:px-0"
 				aria-label="Main navigation"
 			>
 				<app-brand-logo
