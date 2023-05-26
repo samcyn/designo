@@ -13,12 +13,12 @@ import AppIcon from "./shared/AppIcon.vue";
 				<div class="flex flex-col gap-8 xl:flex-row xl:justify-between xl:items-center relative z-10">
 					<div>
 						<p
-							class="font-medium text-center xl:text-left text-white text-[32px] leading-9 md:text-[40px] md:leading-[40px] mb-4 md:max-w-[335px] xl:max-w-[268px] md:mx-auto xl:mx-0"
+							class="footer__cardHeading font-medium text-center xl:text-left text-white leading-9 md:leading-10 mb-4 md:mx-auto xl:mx-0"
 						>
 							Let’s talk about your project
 						</p>
 						<p
-							class="text-white text-center xl:text-left text-[15px] md:text-[16px] leading-25px md:leading-[26px] font-normal md:max-w-[450px] md:mx-auto"
+							class="footer__cardSubheading text-white text-center xl:text-left font-normal md:mx-auto"
 						>
 							Ready to take it to the next level?
 							Contact us today and find out how
@@ -56,7 +56,7 @@ import AppIcon from "./shared/AppIcon.vue";
 		</div>
 
 		<div
-			class="bg-black pt-[253px] pb-16 md:pt-[166px] md:pb-20 xl:pt-[144px] xl:pb-18"
+			class="footer__bottom bg-black pb-16 md:pb-20 xl:pb-18"
 		>
 			<div class="container">
 				<!-- menus -->
@@ -78,7 +78,7 @@ import AppIcon from "./shared/AppIcon.vue";
 							<app-navigation-menu
 								to="/about"
 								class="justify-center basis-full md:basis-auto"
-								link-class-name="text-white tracking-2px text-[14px] leading-[14px] font-normal"
+								link-class-name="text-white tracking-2px text-14px leading-14px font-normal"
 							>
 								Our Company
 							</app-navigation-menu>
@@ -86,7 +86,7 @@ import AppIcon from "./shared/AppIcon.vue";
 							<app-navigation-menu
 								to="/locations"
 								class="justify-center basis-full md:basis-auto"
-								link-class-name="text-white tracking-2px text-[14px] leading-[14px] font-normal"
+								link-class-name="text-white tracking-2px text-14px leading-14px font-normal"
 							>
 								Locations
 							</app-navigation-menu>
@@ -94,7 +94,7 @@ import AppIcon from "./shared/AppIcon.vue";
 							<app-navigation-menu
 								to="/contact"
 								class="justify-center basis-full md:basis-auto"
-								link-class-name="text-white tracking-2px text-[14px] leading-[14px] font-normal"
+								link-class-name="text-white tracking-2px text-14px leading-14px font-normal"
 							>
 								Contact
 							</app-navigation-menu>
@@ -103,13 +103,13 @@ import AppIcon from "./shared/AppIcon.vue";
 				</nav>
 				<!-- end menus -->
 				<div
-					class="footer__bottom flex flex-col md:flex-row md:justify-center md:items-end gap-10 md:gap-[50px] xl:gap-[196px] md:pt-8"
+					class="footer__baseline flex flex-col md:flex-row md:justify-center md:items-end gap-10 md:gap-50px md:pt-8"
 				>
 					<div
-						class="flex basis-full md:grow md:shrink flex-col md:flex-row gap-10 md:gap-[10px] xl:gap-[30px] justify-center md:justify-start items-center"
+						class="flex basis-full md:grow md:shrink flex-col md:flex-row gap-10 md:gap-10px xl:gap-30px justify-center md:justify-start items-center"
 					>
 						<div
-							class="text-center md:text-left text-white/50 mix-blend-normal text-[16px] leading-[26px] font-normal flex-1"
+							class="panels text-center md:text-left text-white/50 mix-blend-normal font-normal flex-1"
 						>
 							<span class="font-bold"
 								>Designo Central Office</span
@@ -118,7 +118,7 @@ import AppIcon from "./shared/AppIcon.vue";
 							Toronto, Ontario M9C 3J5
 						</div>
 						<div
-							class="text-center md:text-left text-white/50 mix-blend-normal text-[16px] leading-[26px] font-normal flex-1"
+							class="panels text-center md:text-left text-white/50 mix-blend-normal font-normal flex-1"
 						>
 							<span class="font-bold"
 								>Contact Us (Central Office)</span
@@ -130,7 +130,7 @@ import AppIcon from "./shared/AppIcon.vue";
 
 					<!-- socials -->
 					<ul
-						class="flex basis-full md:basis-[184px] items-center justify-center gap-4"
+						class="socials flex basis-full items-center justify-center gap-4"
 					>
 						<li>
 							<app-link class="text-peach">
@@ -191,7 +191,13 @@ import AppIcon from "./shared/AppIcon.vue";
 .footer__card {
 	border-radius: 15px;
 }
-
+.footer__cardHeading {
+	font-size: 32px;
+}
+.footer__cardSubheading {
+	font-size: 15px;
+	line-height: 25px;
+}
 .nav__collapse {
 	--tw-shadow: 0 -1px 0px 0px rgba(255, 255, 255, 0.1);
 	--tw-shadow-colored: 0 1px 0px 0px
@@ -222,10 +228,26 @@ import AppIcon from "./shared/AppIcon.vue";
 	mix-blend-mode: normal;
 	opacity: 0.31;
 }
+.footer__bottom {
+	padding-top: 253px;
+}
+.panels {
+	font-size: 16px;
+	line-height: 26px;
+}
 
 @media (min-width: 768px) {
 	.footer__top {
 		margin-bottom: -86px;
+	}
+	.footer__cardHeading {
+		font-size: 40px;
+		max-width: 335px
+	}
+	.footer__cardSubheading {
+		font-size: 16px;
+		line-height: 26px;
+		max-width: 450px;
 	}
 	.overlays {
 		right: -166px;
@@ -235,6 +257,10 @@ import AppIcon from "./shared/AppIcon.vue";
 		box-shadow: none;
 	}
 	.footer__bottom {
+		padding-top: 166px;
+	}
+
+	.footer__baseline {
 		--tw-shadow: 0 -1px 0 0 rgba(255, 255, 255, 0.1);
 		--tw-shadow-colored: 0 1px 0 0
 			var(--tw-shadow-color);
@@ -245,11 +271,23 @@ import AppIcon from "./shared/AppIcon.vue";
 			var(--tw-ring-shadow, 0 0 #0000),
 			var(--tw-shadow);
 	}
+	.socials {
+		flex-basis: 184px;
+	}
 }
 
 @media (min-width: 1440px) {
   .footer__top {
 		margin-bottom: -72px;
+	}
+	.footer__cardHeading {
+		max-width: 268px; 
+	}
+	.footer__bottom {
+		padding-top: 144px;
+	}
+	.footer__baseline {
+		gap: 196px
 	}
 }
 </style>
