@@ -61,18 +61,21 @@ const onExpand = () => {
 					>
 						<app-navigation-menu
 							to="/about"
+							class="justify-start md:justify-center basis-full md:basis-auto"
 							link-class-name="text-white md:text-dark-grey text-24px md:text-14px leading-25px md:leading-14px tracking-2px font-normal uppercase m-0"
 						>
 							Our Company
 						</app-navigation-menu>
 						<app-navigation-menu
 							to="/locations"
+							class="justify-start md:justify-center basis-full md:basis-auto"
 							link-class-name="text-white md:text-dark-grey text-24px md:text-14px leading-25px md:leading-14px tracking-2px font-normal uppercase m-0"
 						>
 							Locations
 						</app-navigation-menu>
 						<app-navigation-menu
 							to="/contact"
+							class="justify-start md:justify-center basis-full md:basis-auto"
 							link-class-name="text-white md:text-dark-grey text-24px md:text-14px leading-25px md:leading-14px tracking-2px font-normal uppercase m-0"
 						>
 							Contact

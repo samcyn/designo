@@ -1,39 +1,67 @@
 <script setup lang="ts">
 import AppBrandLogo from "~/components/shared/AppBrandLogo.vue";
 import AppButton from "./shared/AppButton.vue";
+import AppLink from "./shared/AppLink.vue";
+import AppIcon from "./shared/AppIcon.vue";
 </script>
 <template>
 	<footer>
-		<div class="container relative">
+		<div class="footer__top container relative">
 			<div
-				class="footer__top bg-peach py-16 px-6"
+				class="footer__card relative bg-peach py-16 px-6 md:p-14 xl:py-18 xl:px-24 overflow-hidden"
 			>
-				<p
-					class="font-normal text-center text-white text-[32px] leading-9 mb-[6px]"
+				<div class="flex flex-col gap-8 xl:flex-row xl:justify-between xl:items-center relative z-10">
+					<div>
+						<p
+							class="font-medium text-center xl:text-left text-white text-[32px] leading-9 md:text-[40px] md:leading-[40px] mb-4 md:max-w-[335px] xl:max-w-[268px] md:mx-auto xl:mx-0"
+						>
+							Let’s talk about your project
+						</p>
+						<p
+							class="text-white text-center xl:text-left text-[15px] md:text-[16px] leading-25px md:leading-[26px] font-normal md:max-w-[450px] md:mx-auto"
+						>
+							Ready to take it to the next level?
+							Contact us today and find out how
+							our expertise can help your business
+							grow.
+						</p>
+					</div>
+
+					<div class="text-center">
+						<app-button
+							class="m-auto"
+							button-type="secondary"
+							>Get In Touch</app-button
+						>
+					</div>
+				</div>
+				<div
+					class="overlays absolute grid grid-cols-3"
 				>
-					Let’s talk about your project
-				</p>
-				<p
-					class="text-white text-center text-[15px] leading-25px font-normal mb-8"
-				>
-					Ready to take it to the next level?
-					Contact us today and find out how our
-					expertise can help your business grow.
-				</p>
-				<div class="text-center">
-					<app-button
-						class="m-auto"
-						button-type="secondary"
-						>Get In Touch</app-button
-					>
+					<div
+						class="overlays__circle col-start-2"
+					></div>
+					<div
+						class="overlays__circle -rotate-90"
+					></div>
+					<div
+						class="overlays__circle rotate-90"
+					></div>
+					<div class="overlays__circle"></div>
+					<div
+						class="overlays__circle -rotate-90"
+					></div>
 				</div>
 			</div>
 		</div>
-		<div class="bg-black">
+
+		<div
+			class="bg-black pt-[253px] pb-16 md:pt-[166px] md:pb-20 xl:pt-[144px] xl:pb-18"
+		>
 			<div class="container">
 				<!-- menus -->
 				<nav
-					class="header__nav flex flex-wrap md:flex-nowrap items-center lg:items-center py-9 md:py-16 xl:px-0"
+					class="header__nav flex justify-center md:justify-normal flex-wrap md:flex-nowrap items-center lg:items-center mb-10"
 					aria-label="footer navigation"
 				>
 					<app-brand-logo
@@ -42,31 +70,186 @@ import AppButton from "./shared/AppButton.vue";
 					/>
 
 					<div
-						class="basis-full md:basis-auto px-6 py-12 md:px-0 md:py-0 flex-grow items-center justify-between bg-black"
+						class="nav__collapse basis-full md:basis-auto flex-grow mt-8 md:mt-0"
 					>
 						<ul
-							class="flex flex-wrap flex-row md:flex-grow md:justify-end p-0 m-0 list-none gap-8 md:gap-10"
+							class="flex flex-wrap flex-row md:flex-grow md:justify-end list-none pt-8 md:pt-0 gap-8 md:gap-10"
 						>
-							<app-navigation-menu to="/about">
+							<app-navigation-menu
+								to="/about"
+								class="justify-center basis-full md:basis-auto"
+								link-class-name="text-white tracking-2px text-[14px] leading-[14px] font-normal"
+							>
 								Our Company
 							</app-navigation-menu>
+
 							<app-navigation-menu
 								to="/locations"
+								class="justify-center basis-full md:basis-auto"
+								link-class-name="text-white tracking-2px text-[14px] leading-[14px] font-normal"
 							>
 								Locations
 							</app-navigation-menu>
-							<app-navigation-menu to="/contact">
+
+							<app-navigation-menu
+								to="/contact"
+								class="justify-center basis-full md:basis-auto"
+								link-class-name="text-white tracking-2px text-[14px] leading-[14px] font-normal"
+							>
 								Contact
 							</app-navigation-menu>
 						</ul>
 					</div>
 				</nav>
+				<!-- end menus -->
+				<div
+					class="footer__bottom flex flex-col md:flex-row md:justify-center md:items-end gap-10 md:gap-[50px] xl:gap-[196px] md:pt-8"
+				>
+					<div
+						class="flex basis-full md:grow md:shrink flex-col md:flex-row gap-10 md:gap-[10px] xl:gap-[30px] justify-center md:justify-start items-center"
+					>
+						<div
+							class="text-center md:text-left text-white/50 mix-blend-normal text-[16px] leading-[26px] font-normal flex-1"
+						>
+							<span class="font-bold"
+								>Designo Central Office</span
+							><br />
+							3886 Wellington Street<br />
+							Toronto, Ontario M9C 3J5
+						</div>
+						<div
+							class="text-center md:text-left text-white/50 mix-blend-normal text-[16px] leading-[26px] font-normal flex-1"
+						>
+							<span class="font-bold"
+								>Contact Us (Central Office)</span
+							>
+							<br />P : +1 253-863-8967<br />
+							M : contact@designo.co
+						</div>
+					</div>
+
+					<!-- socials -->
+					<ul
+						class="flex basis-full md:basis-[184px] items-center justify-center gap-4"
+					>
+						<li>
+							<app-link class="text-peach">
+								<app-icon
+									icon="facebook"
+									width="24"
+									height="24"
+								/>
+							</app-link>
+						</li>
+						<li>
+							<app-link class="text-peach">
+								<app-icon
+									icon="youtube"
+									width="24"
+									height="24"
+								/>
+							</app-link>
+						</li>
+						<li>
+							<app-link class="text-peach">
+								<app-icon
+									icon="twitter"
+									width="24"
+									height="20"
+								/>
+							</app-link>
+						</li>
+						<li>
+							<app-link class="text-peach">
+								<app-icon
+									icon="pinterest"
+									width="24"
+									height="24"
+								/>
+							</app-link>
+						</li>
+						<li>
+							<app-link class="text-peach">
+								<app-icon
+									icon="instagram"
+									width="24"
+									height="24"
+								/>
+							</app-link>
+						</li>
+					</ul>
+					<!-- socials end -->
+				</div>
 			</div>
 		</div>
 	</footer>
 </template>
 <style scoped lang="css">
 .footer__top {
+	margin-bottom: -189px;
+}
+.footer__card {
 	border-radius: 15px;
+}
+
+.nav__collapse {
+	--tw-shadow: 0 -1px 0px 0px rgba(255, 255, 255, 0.2);
+	--tw-shadow-colored: 0 1px 0px 0px
+		var(--tw-shadow-color);
+	box-shadow: var(
+			--tw-ring-offset-shadow,
+			0 0 #0000
+		),
+		var(--tw-ring-shadow, 0 0 #0000),
+		var(--tw-shadow);
+}
+
+.overlays {
+	height: 584px;
+	width: 876px;
+	right: -309px;
+	top: -102px;
+}
+.overlays__circle {
+	width: 292px;
+	height: 292px;
+	border-radius: 100%;
+	background: linear-gradient(
+		90deg,
+		rgba(93, 2, 2, 0.0001) 0%,
+		rgba(93, 2, 2, 0.497569) 100%
+	);
+	mix-blend-mode: normal;
+	opacity: 0.31;
+}
+
+@media (min-width: 768px) {
+	.footer__top {
+		margin-bottom: -86px;
+	}
+	.overlays {
+		right: -166px;
+		top: -117px;
+	}
+	.nav__collapse {
+		box-shadow: none;
+	}
+	.footer__bottom {
+		--tw-shadow: 0 -1px 0px 0px rgba(255, 255, 255, 0.2);
+		--tw-shadow-colored: 0 1px 0px 0px
+			var(--tw-shadow-color);
+		box-shadow: var(
+				--tw-ring-offset-shadow,
+				0 0 #0000
+			),
+			var(--tw-ring-shadow, 0 0 #0000),
+			var(--tw-shadow);
+	}
+}
+
+@media (min-width: 1440px) {
+  .footer__top {
+		margin-bottom: -72px;
+	}
 }
 </style>

@@ -7,7 +7,9 @@ export enum IconEnums {
   instagram = 'Instagram',
   'arrow-forward-right' = 'Arrow Forward Right',
   check = 'Check Arrow',
-  close = 'Close'
+  close = 'Close',
+  youtube = 'YouTube',
+  pinterest = 'Pinterest'
 }
 
 export type IconTypes = keyof typeof IconEnums;
@@ -50,6 +52,10 @@ const Close = `
   <path d="M17.071.1L19.9 2.93l-7.071 7.07 7.071 7.072-2.828 2.828L10 12.828l-7.071 7.071L.1 17.071 7.17 10 .102 2.929 2.929.1l7.07 7.07 7.072-7.07z" fill="currentColor" fill-rule="evenodd"/>
 `;
 
+const YouTube = `<path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.441 16.892c-2.102.144-6.784.144-8.883 0C5.282 16.736 5.017 15.622 5 12c.017-3.629.285-4.736 2.558-4.892 2.099-.144 6.782-.144 8.883 0C18.718 7.264 18.982 8.378 19 12c-.018 3.629-.285 4.736-2.559 4.892zM10 9.658l4.917 2.338L10 14.342V9.658z" fill="currentColor" fill-rule="nonzero"/>`;
+
+const Pinterest = `<path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z" fill="currentColor" fill-rule="nonzero"/>`;
+
 const IconsLibrary: Record<IconTypes, string> = {
   hamburger: Hamburger,
   cart: Cart,
@@ -60,6 +66,8 @@ const IconsLibrary: Record<IconTypes, string> = {
   'arrow-forward-right': ArrowForwardRight,
   check: CheckArrow,
   close: Close,
+  youtube: YouTube,
+  pinterest: Pinterest
 };
 
 export default IconsLibrary;

@@ -14,7 +14,7 @@ defineProps<Props>();
 
 <template>
 	<li
-		class="flex justify-start md:justify-center basis-full md:basis-auto"
+		class="flex"
 	>
 		<app-link
 			:to="to"
