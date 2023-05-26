@@ -1,108 +1,72 @@
 <script setup lang="ts">
-// import AppBrandLogo from '../shared/AppBrandLogo.vue';
-// import AppIconButton from '../shared/AppIconButton.vue';
-// import AppMenus from '../shared/AppMenus.vue';
+import AppBrandLogo from "~/components/shared/AppBrandLogo.vue";
+import AppButton from "./shared/AppButton.vue";
 </script>
 <template>
-	<footer class="bg-black-90">
-		<div
-			class="footer__container container relative lg:pb-12"
-		>
-			<nav
-				class="flex flex-col items-center gap-12 md:items-start md:gap-8 lg:flex-row lg:items-center lg:justify-between"
-			>
-				<!-- <app-brand-logo aria-label="audioPhile" /> -->
-				<!-- <app-menus mode="footer" /> -->
-				<div
-					class="footer__indicator absolute h-1 bg-orange-100 top-0"
-				></div>
-			</nav>
-			<p
-				class="footer__description mt-12 md:mt-8 lg:mt-9 text-white/50 text-center md:text-left font-medium"
-			>
-				Audiophile is an all
-				in one stop to fulfill
-				your audio needs.
-				We're a small team of
-				music lovers and sound
-				specialists who are
-				devoted to helping you
-				get the most out of
-				personal audio. Come
-				and visit our demo
-				facility - we’re open
-				7 days a week.
-			</p>
+	<footer>
+		<div class="container relative">
 			<div
-				class="flex items-center justify-between flex-wrap mt-12 md:mt-20 lg:mt-14"
+				class="footer__top bg-peach py-16 px-6"
 			>
 				<p
-					class="footer__copyright-text text-white/50 text-center md:text-left font-bold basis-full md:basis-auto"
+					class="font-normal text-center text-white text-[32px] leading-9 mb-[6px]"
 				>
-					Copyright 2023. All
-					Rights Reserved
+					Let’s talk about your project
 				</p>
-				<ul
-					class="footer__socials flex items-center gap-4 basis-full md:basis-auto mt-12 md:mt-0 justify-center"
+				<p
+					class="text-white text-center text-[15px] leading-25px font-normal mb-8"
 				>
-					<li
-						class="flex items-center"
+					Ready to take it to the next level?
+					Contact us today and find out how our
+					expertise can help your business grow.
+				</p>
+				<div class="text-center">
+					<app-button
+						class="m-auto"
+						button-type="secondary"
+						>Get In Touch</app-button
 					>
-						<!-- <app-icon-button icon="facebook" height="24px" width="24px" /> -->
-					</li>
-					<li
-						class="flex items-center"
+				</div>
+			</div>
+		</div>
+		<div class="bg-black">
+			<div class="container">
+				<!-- menus -->
+				<nav
+					class="header__nav flex flex-wrap md:flex-nowrap items-center lg:items-center py-9 md:py-16 xl:px-0"
+					aria-label="footer navigation"
+				>
+					<app-brand-logo
+						class="logo text-white"
+						aria-label="designo logo footer"
+					/>
+
+					<div
+						class="basis-full md:basis-auto px-6 py-12 md:px-0 md:py-0 flex-grow items-center justify-between bg-black"
 					>
-						<!-- <app-icon-button icon="twitter" height="19.5px" width="24px" /> -->
-					</li>
-					<li
-						class="flex items-center"
-					>
-						<!-- <app-icon-button icon="instagram" height="24px" width="24px" /> -->
-					</li>
-				</ul>
+						<ul
+							class="flex flex-wrap flex-row md:flex-grow md:justify-end p-0 m-0 list-none gap-8 md:gap-10"
+						>
+							<app-navigation-menu to="/about">
+								Our Company
+							</app-navigation-menu>
+							<app-navigation-menu
+								to="/locations"
+							>
+								Locations
+							</app-navigation-menu>
+							<app-navigation-menu to="/contact">
+								Contact
+							</app-navigation-menu>
+						</ul>
+					</div>
+				</nav>
 			</div>
 		</div>
 	</footer>
 </template>
-<style scoped>
-.footer__container {
-	padding-top: 52px;
-	padding-bottom: 38px;
-}
-
-.footer__indicator {
-	width: 101px;
-}
-
-.footer__description {
-	font-size: 15px;
-	line-height: 25px;
-}
-
-.footer__copyright-text {
-	font-size: 15px;
-	line-height: 25px;
-}
-
-@media (min-width: 768px) {
-	.footer__container {
-		padding-top: 60px;
-		padding-bottom: 46px;
-	}
-}
-
-@media (min-width: 1024px) {
-	.footer__container {
-		padding-top: 75px;
-	}
-
-	.footer__description {
-		max-width: 540px;
-	}
-
-	.footer__socials {
-		margin-top: -167px;
-	}
+<style scoped lang="css">
+.footer__top {
+	border-radius: 15px;
 }
 </style>

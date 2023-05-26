@@ -10,7 +10,7 @@ import AppIcon from '~/components/shared/AppIcon.vue';
 
 <template>
 	<app-link
-		class="transition p-0 mr-0 inline-flex items-center hover:text-orange-100"
+		class="transition p-0 mr-0 inline-flex items-center"
 		to="/"
 		aria-label="designo logo"
 	>

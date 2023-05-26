@@ -5,6 +5,8 @@ import AppLink from "./shared/AppLink.vue";
 
 type Props = {
 	to?: RouteLocationRaw;
+	activeclass?: string
+	linkClassName?: string
 };
 
 defineProps<Props>();
@@ -16,8 +18,9 @@ defineProps<Props>();
 	>
 		<app-link
 			:to="to"
-			class="flex text-white md:text-dark-grey text-24px md:text-14px leading-25px md:leading-14px tracking-2px font-normal uppercase m-0"
-			activeclass="!text-orange"
+			class="flex"
+			:class="linkClassName"
+			:active-class="activeclass"
 			><slot
 		/></app-link>
 	</li>

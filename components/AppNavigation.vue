@@ -2,27 +2,23 @@
 import AppBrandLogo from "~/components/shared/AppBrandLogo.vue";
 import AppIconButton from "~/components/shared/AppIconButton.vue";
 
-const expandClass =
-	ref(false);
+const expandClass = ref(false);
 
 const onExpand = () => {
-	expandClass.value =
-		!expandClass.value;
+	expandClass.value = !expandClass.value;
 };
 </script>
 
 <template>
-	<header
-		class="relative bg-white z-50"
-	>
+	<header class="relative bg-white z-50">
 		<div class="container relative">
 			<nav
 				class="header__nav flex flex-wrap md:flex-nowrap items-center lg:items-center py-9 md:py-16 xl:px-0"
 				aria-label="Main navigation"
 			>
 				<app-brand-logo
-					class="logo"
-					aria-label="audioPhile"
+					class="logo hover:text-orange-100"
+					aria-label="designo logo"
 				/>
 
 				<div
@@ -58,19 +54,27 @@ const onExpand = () => {
 						bg-black md:bg-white
 						absolute md:relative
 						left-0 right-0 top-24 md:inset-auto w-full md:w-auto
-						`
-					"
+						`"
 				>
 					<ul
 						class="flex flex-wrap flex-row md:flex-grow md:justify-end p-0 m-0 list-none gap-8 md:gap-10"
 					>
-						<app-navigation-menu to="/about">
+						<app-navigation-menu
+							to="/about"
+							link-class-name="text-white md:text-dark-grey text-24px md:text-14px leading-25px md:leading-14px tracking-2px font-normal uppercase m-0"
+						>
 							Our Company
 						</app-navigation-menu>
-						<app-navigation-menu to="/locations">
+						<app-navigation-menu
+							to="/locations"
+							link-class-name="text-white md:text-dark-grey text-24px md:text-14px leading-25px md:leading-14px tracking-2px font-normal uppercase m-0"
+						>
 							Locations
 						</app-navigation-menu>
-						<app-navigation-menu to="/contact">
+						<app-navigation-menu
+							to="/contact"
+							link-class-name="text-white md:text-dark-grey text-24px md:text-14px leading-25px md:leading-14px tracking-2px font-normal uppercase m-0"
+						>
 							Contact
 						</app-navigation-menu>
 					</ul>
