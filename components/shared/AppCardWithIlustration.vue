@@ -33,7 +33,7 @@ withDefaults(defineProps<Props>(), {
 		</figure>
 		<div class="md:grow md:shrink md:basis-0">
 			<p
-				class="card__title text-dark-grey text-center md:text-left xl:text-center font-normal mb-8 md:mb-4 xl:mb-8"
+				class="card__title text-dark-grey text-center md:text-left xl:text-center font-medium mb-8 md:mb-4 xl:mb-8"
 			>
 				{{ title }}
 			</p>
