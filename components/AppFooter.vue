@@ -8,7 +8,7 @@ import AppIcon from "./shared/AppIcon.vue";
 	<footer>
 		<div class="footer__top container relative">
 			<div
-				class="footer__card relative bg-peach py-16 px-6 md:p-14 xl:py-18 xl:px-24 overflow-hidden"
+				class="footer__card relative bg-peach py-16 px-6 md:p-14 xl:py-18 xl:px-24 overflow-hidden group"
 			>
 				<div class="flex flex-col gap-8 xl:flex-row xl:justify-between xl:items-center relative z-10">
 					<div>
@@ -36,7 +36,7 @@ import AppIcon from "./shared/AppIcon.vue";
 					</div>
 				</div>
 				<div
-					class="overlays absolute grid grid-cols-3"
+					class="overlays absolute grid grid-cols-3 transition group-hover:scale-110"
 				>
 					<div
 						class="overlays__circle col-start-2"
@@ -193,7 +193,7 @@ import AppIcon from "./shared/AppIcon.vue";
 }
 
 .nav__collapse {
-	--tw-shadow: 0 -1px 0px 0px rgba(255, 255, 255, 0.2);
+	--tw-shadow: 0 -1px 0px 0px rgba(255, 255, 255, 0.1);
 	--tw-shadow-colored: 0 1px 0px 0px
 		var(--tw-shadow-color);
 	box-shadow: var(
@@ -235,8 +235,8 @@ import AppIcon from "./shared/AppIcon.vue";
 		box-shadow: none;
 	}
 	.footer__bottom {
-		--tw-shadow: 0 -1px 0px 0px rgba(255, 255, 255, 0.2);
-		--tw-shadow-colored: 0 1px 0px 0px
+		--tw-shadow: 0 -1px 0 0 rgba(255, 255, 255, 0.1);
+		--tw-shadow-colored: 0 1px 0 0
 			var(--tw-shadow-color);
 		box-shadow: var(
 				--tw-ring-offset-shadow,
