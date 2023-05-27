@@ -36,20 +36,20 @@ import AppIcon from "./shared/AppIcon.vue";
 					</div>
 				</div>
 				<div
-					class="overlays absolute grid grid-cols-3 transition group-hover:scale-110"
+					class="overlaysApp absolute grid grid-cols-3 transition group-hover:scale-110"
 				>
 					<div
-						class="overlays__circle col-start-2"
+						class="overlaysApp__circle col-start-2"
 					></div>
 					<div
-						class="overlays__circle -rotate-90"
+						class="overlaysApp__circle -rotate-90"
 					></div>
 					<div
-						class="overlays__circle rotate-90"
+						class="overlaysApp__circle rotate-90"
 					></div>
-					<div class="overlays__circle"></div>
+					<div class="overlaysApp__circle"></div>
 					<div
-						class="overlays__circle -rotate-90"
+						class="overlaysApp__circle -rotate-90"
 					></div>
 				</div>
 			</div>
@@ -210,24 +210,11 @@ import AppIcon from "./shared/AppIcon.vue";
 		var(--tw-shadow);
 }
 
-.overlays {
-	height: 584px;
-	width: 876px;
+.overlaysApp {
 	right: -309px;
 	top: -102px;
 }
-.overlays__circle {
-	width: 292px;
-	height: 292px;
-	border-radius: 100%;
-	background: linear-gradient(
-		90deg,
-		rgba(93, 2, 2, 0.0001) 0%,
-		rgba(93, 2, 2, 0.497569) 100%
-	);
-	mix-blend-mode: normal;
-	opacity: 0.31;
-}
+
 .footer__bottom {
 	padding-top: 253px;
 }
@@ -249,7 +236,7 @@ import AppIcon from "./shared/AppIcon.vue";
 		line-height: 26px;
 		max-width: 450px;
 	}
-	.overlays {
+	.overlaysApp {
 		right: -166px;
 		top: -117px;
 	}

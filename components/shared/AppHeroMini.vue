@@ -28,25 +28,7 @@ defineProps<Props>();
 				</p>
 			</div>
 			<!-- overlays -->
-			<div
-				class="overlays absolute grid grid-cols-3 transition group-hover:translate-x-2"
-			>
-				<div
-					class="overlays__circle -rotate-90"
-				></div>
-				<div
-					class="overlays__circle -rotate-180"
-				></div>
-				<div
-					class="overlays__circle rotate-90"
-				></div>
-				<div
-					class="overlays__circle col-start-2 -rotate-180"
-				></div>
-				<div
-					class="overlays__circle rotate-90"
-				></div>
-			</div>
+			<slot name="overlays"></slot>
 		</div>
 	</div>
 </template>
@@ -65,25 +47,6 @@ defineProps<Props>();
 	line-height: 25px;
 }
 
-.overlays {
-	height: 584px;
-	width: 876px;
-	right: 0px;
-	top: 0px;
-}
-.overlays__circle {
-	width: 292px;
-	height: 292px;
-	border-radius: 100%;
-	background: linear-gradient(
-		90deg,
-		rgba(93, 2, 2, 0.0001) 0%,
-		rgba(93, 2, 2, 0.497569) 100%
-	);
-	mix-blend-mode: normal;
-	opacity: 0.31;
-}
-
 @media (min-width: 768px) {
 	.card {
 		padding-top: 64px;
@@ -100,17 +63,6 @@ defineProps<Props>();
 		font-size: 16px;
 		line-height: 26px;
 		max-width: 445px;
-	}
-	.overlays {
-		top: -166px;
-		right: -166px;
-	}
-}
-
-@media (min-width: 1440px) {
-  .overlays {
-		top: -166px;
-		right: 0;
 	}
 }
 </style>

@@ -7,9 +7,51 @@ import AppOtherAppSection from "~/components/shared/AppOtherAppSection.vue";
 	<app-hero-mini
 		title="Web Design"
 		description="We build websites that serve as powerful marketing tools and bring memorable brand experiences."
-	/>
+	>
+		<template #overlays>
+			<div
+				class="overlaysApp absolute grid grid-cols-3 transition group-hover:translate-x-2"
+			>
+				<div
+					class="overlaysApp__circle -rotate-90"
+				></div>
+				<div
+					class="overlaysApp__circle -rotate-180"
+				></div>
+				<div
+					class="overlaysApp__circle rotate-90"
+				></div>
+				<div
+					class="overlaysApp__circle col-start-2 -rotate-180"
+				></div>
+				<div
+					class="overlaysApp__circle rotate-90"
+				></div>
+			</div>
+		</template>
+	</app-hero-mini>
 	<!-- portfolios -->
 	<app-web-portfolio-sections />
 	<!-- other apps -->
 	<app-other-app-section />
 </template>
+<style scoped lang="css">
+.overlaysApp {
+	right: 0px;
+	top: 0px;
+}
+
+@media (min-width: 768px) {
+	.overlaysApp {
+		top: -166px;
+		right: -166px;
+	}
+}
+
+@media (min-width: 1440px) {
+	.overlaysApp {
+		top: -166px;
+		right: 0;
+	}
+}
+</style>
