@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import AppHeroMini from "~/components/shared/AppHeroMini.vue";
-import AppPortfolioSections from "~/components/web-design-page/AppPortfolioSections.vue";
+import AppWebPortfolioSections from "~/components/web-design-page/AppWebPortfolioSections.vue";
 import AppOtherAppSection from "~/components/shared/AppOtherAppSection.vue";
 </script>
 <template>
@@ -9,7 +9,7 @@ import AppOtherAppSection from "~/components/shared/AppOtherAppSection.vue";
 		description="We build websites that serve as powerful marketing tools and bring memorable brand experiences."
 	/>
 	<!-- portfolios -->
-	<app-portfolio-sections />
+	<app-web-portfolio-sections />
 	<!-- other apps -->
 	<app-other-app-section />
 </template>
