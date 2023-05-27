@@ -44,17 +44,17 @@ import AppCardWithOverlay from "~/components/shared/AppCardWithOverlay.vue";
 								sub-title="view projects"
 							>
 								<img
-									src="~/assets/home/mobile/image-web-design.jpg"
+									src="~/assets/home/mobile/image-app-design.jpg"
 									alt="alt"
 									class="object-cover w-full h-full md:hidden"
 								/>
 								<img
-									src="~/assets/home/tablet/image-web-design.jpg"
+									src="~/assets/home/tablet/image-app-design.jpg"
 									alt="alt"
 									class="object-cover w-full h-full hidden md:block xl:hidden"
 								/>
 								<img
-									src="~/assets/home/desktop/image-web-design-large.jpg"
+									src="~/assets/home/desktop/image-app-design.jpg"
 									alt="alt"
 									class="object-cover w-full h-full hidden md:hidden xl:block"
 								/>
@@ -68,17 +68,17 @@ import AppCardWithOverlay from "~/components/shared/AppCardWithOverlay.vue";
 								sub-title="view projects"
 							>
 								<img
-									src="~/assets/home/mobile/image-web-design.jpg"
+									src="~/assets/home/mobile/image-graphic-design.jpg"
 									alt="alt"
 									class="object-cover w-full h-full md:hidden"
 								/>
 								<img
-									src="~/assets/home/tablet/image-web-design.jpg"
+									src="~/assets/home/tablet/image-graphic-design.jpg"
 									alt="alt"
 									class="object-cover w-full h-full hidden md:block xl:hidden"
 								/>
 								<img
-									src="~/assets/home/desktop/image-web-design-large.jpg"
+									src="~/assets/home/desktop/image-graphic-design.jpg"
 									alt="alt"
 									class="object-cover w-full h-full hidden md:hidden xl:block"
 								/>
