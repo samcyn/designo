@@ -19,7 +19,7 @@ defineProps<Props>();
         <img :src="source" :alt="imgAlt" />
       </slot>
     </figure>
-    <div class="card__body bg-[#FDF3F0] w-full group-hover:bg-peach md:flex-1 xl:flex-none">
+    <div class="card__body bg-pale w-full group-hover:bg-peach md:flex-1 xl:flex-none">
       <p class="card__title uppercase text-peach text-center font-medium mb-4 group-hover:text-white">
         {{ title }}
       </p>

@@ -14,6 +14,7 @@ import AppCardWithBanner from "~/components/shared/AppCardWithBanner.vue";
         We’re always looking forward to creating brands, 
         products, and digital experiences that connect with our clients’ audiences.
       "
+			reverse
 		>
 			<img
 				class="h-full w-full object-cover"

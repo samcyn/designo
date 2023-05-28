@@ -5,7 +5,7 @@ import AppButton from "./AppButton.vue";
 	<div class="container">
 		<div
 			role="banner"
-			class="banner relative bg-peach overflow-hidden -mx-6 px-6 md:mx-0 md:px-0"
+			class="banner relative bg-peach overflow-hidden -mx-6 px-6 md:mx-0 md:px-0 group transition"
 		>
 			<div
 				class="relative flex flex-wrap xl:justify-between z-10"
@@ -51,7 +51,9 @@ import AppButton from "./AppButton.vue";
 				</div>
 			</div>
 			<!-- oval -->
-			<div class="banner__oval absolute"></div>
+			<div class="banner__oval transition absolute group-hover:scale-105">
+				<div class="banner__ball"></div>
+			</div>
 		</div>
 	</div>
 </template>
@@ -77,6 +79,12 @@ import AppButton from "./AppButton.vue";
 }
 
 .banner__oval {
+	top: 102px;
+	left: 0;
+	border-radius: 100%;
+	z-index: 1;
+}
+.banner__ball {
 	width: 640px;
 	height: 640px;
 	background: linear-gradient(
@@ -87,10 +95,7 @@ import AppButton from "./AppButton.vue";
 	mix-blend-mode: normal;
 	opacity: 0.31;
 	transform: matrix(0, -1, -1, 0, 0, 0);
-	top: 102px;
-	left: 0;
 	border-radius: 100%;
-	z-index: 1;
 }
 
 @media (min-width: 768px) {

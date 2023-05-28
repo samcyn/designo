@@ -23,6 +23,7 @@ module.exports = {
       current: "currentColor",
       peach: "#E7816B",
       ['peach-light']: "#FFAD9B",
+      pale: '#FDF3F0',
       black: "#1D1C1E",
       ['dark-grey']: "#333136",
       ['light-grey']: "#F1F3F5",
@@ -44,6 +45,7 @@ module.exports = {
         "18": "72px",
         "75": "300px",
         "100": "400px",
+        "160": "640px"
       },
       letterSpacing: {
         '2px': '2px',
@@ -56,6 +58,9 @@ module.exports = {
         '14px': '14px',
         '24px': '24px'
       },
+      zIndex: {
+        '1': '1',
+      }
     },
   },
   plugins: [],
