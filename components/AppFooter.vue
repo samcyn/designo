@@ -29,7 +29,6 @@ import AppIcon from "./shared/AppIcon.vue";
 
 					<div class="text-center">
 						<app-button
-							class="m-auto"
 							button-type="secondary"
 							>Get In Touch</app-button
 						>
@@ -268,13 +267,17 @@ import AppIcon from "./shared/AppIcon.vue";
 		margin-bottom: -72px;
 	}
 	.footer__cardHeading {
-		max-width: 268px; 
+		max-width: 270px; 
 	}
 	.footer__bottom {
 		padding-top: 144px;
 	}
 	.footer__baseline {
 		gap: 196px
+	}
+	.overlaysApp {
+		right: 0;
+		top: -146px;
 	}
 }
 </style>

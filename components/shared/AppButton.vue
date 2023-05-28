@@ -67,7 +67,10 @@ const classComputed = computed<string>(() => {
 				"border-0 bg-none text-grey-100 opacity-50 hover:text-black-100 hover:opacity-100";
 		}
 	}
-	return `${className} ${attrs.class || ""}`;
+	return `${className} ${
+		attrs.class ||
+		"text-[15px] leading-[22px] tracking-[1px] font-medium py-4 px-6"
+	}`;
 });
 </script>
 
@@ -84,12 +87,7 @@ const classComputed = computed<string>(() => {
 <style scoped>
 .button {
 	font-style: normal;
-	font-weight: 500;
-	font-size: 15px;
-	line-height: 22px;
-	letter-spacing: 1px;
 	text-transform: uppercase;
-	padding: 16px 24px;
 	border-radius: 8px;
 	outline: 0;
 	cursor: pointer;

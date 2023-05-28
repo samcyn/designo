@@ -1,8 +1,8 @@
 <script setup lang="ts">
 interface Props {
 	matrix?: "octa" | "semi" | "deca";
-	title: string;
-	description: string;
+	title?: string;
+	description?: string;
 	src?: string;
 	alt?: string;
 }
@@ -11,11 +11,14 @@ interface Props {
 withDefaults(defineProps<Props>(), {
 	matrix: "semi",
 });
+const attr = useAttrs();
+// component can inherit class for custom styling or use default
+const className =
+	attr.class ||
+	"flex-col md:flex-row xl:flex-col items-center justify-center gap-12";
 </script>
 <template>
-	<div
-		class="flex flex-col md:flex-row xl:flex-col items-center justify-center gap-12"
-	>
+	<div class="flex" :class="className">
 		<figure
 			class="card__figure flex justify-center items-center relative overflow-hidden"
 		>
@@ -32,16 +35,18 @@ withDefaults(defineProps<Props>(), {
 			></div>
 		</figure>
 		<div class="md:grow md:shrink md:basis-0">
-			<p
-				class="card__title text-dark-grey text-center md:text-left xl:text-center font-medium mb-8 md:mb-4 xl:mb-8"
-			>
-				{{ title }}
-			</p>
-			<p
-				class="card__description text-dark-grey font-normal text-center md:text-left xl:text-center"
-			>
-				{{ description }}
-			</p>
+			<slot name="body">
+				<p
+					class="card__title text-dark-grey text-center md:text-left xl:text-center font-medium mb-8 md:mb-4 xl:mb-8"
+				>
+					{{ title }}
+				</p>
+				<p
+					class="card__description text-dark-grey font-normal text-center md:text-left xl:text-center"
+				>
+					{{ description }}
+				</p>
+			</slot>
 		</div>
 	</div>
 </template>
