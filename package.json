@@ -10,7 +10,11 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.7.0",
+    "@types/leaflet": "^1.9.3",
     "@types/node": "^18",
     "nuxt": "^3.5.1"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4"
   }
 }
