@@ -109,7 +109,7 @@ const onSubmit = (e: Events["onSubmit"]) => {
 					class="hidden md:block overlay overlaysApp__circle absolute md:-top-[83px] md:-left-[121px] xl:left-0 xl:-top-40 transition group-hover:scale-105"
 				></div>
 				<div
-					class="md:hidden w-[584px] absolute grid grid-cols-2 transition group-hover:translate-x-2 -left-[92px] top-0"
+					class="md:hidden w-[584px] absolute grid grid-cols-2 transition group-hover:scale-105 -left-[92px] top-0"
 				>
 					<div
 						class="overlaysApp__circle -rotate-90"

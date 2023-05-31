@@ -15,7 +15,7 @@ import AppOtherAppSection from "~/components/shared/AppOtherAppSection.vue";
 			>
 				<template #overlays>
 					<div
-						class="overlaysApp absolute grid grid-cols-3 transition group-hover:translate-x-2"
+						class="overlaysApp absolute grid grid-cols-3 transition group-hover:scale-105"
 					>
 						<div
 							class="overlaysApp__circle xl:col-start-2 md:-rotate-90 xl:rotate-0"
