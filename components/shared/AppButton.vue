@@ -69,7 +69,7 @@ const classComputed = computed<string>(() => {
 	}
 	return `${className} ${
 		attrs.class ||
-		"text-[15px] leading-[22px] tracking-[1px] font-medium py-4 px-6"
+		"text-[15px] leading-[22px] tracking-[1px] font-medium py-4 px-6 justify-center"
 	}`;
 });
 </script>
@@ -91,5 +91,6 @@ const classComputed = computed<string>(() => {
 	border-radius: 8px;
 	outline: 0;
 	cursor: pointer;
+	min-width: 152px;
 }
 </style>

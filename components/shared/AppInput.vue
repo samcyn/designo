@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AppIconButton from "./AppIconButton.vue";
+import AppIconButton from "~/components/shared/AppIconButton.vue";
 
 interface AppButtonProps {
 	label?: string;
@@ -7,40 +7,66 @@ interface AppButtonProps {
 	hasError?: boolean;
 	variant?: "default" | "custom";
 	ariaLabel?: string;
-  type?: string
-  required?: boolean
+	type?: string;
+	required?: boolean;
+	placeholder?: string;
+	rows?: number;
+	name: string;
 }
 
-const props = withDefaults(defineProps<AppButtonProps>(), {
-	hasError: false,
-	errorMessage: "can't be empty",
-  variant: 'default',
-  type: 'input',
-  required: true
-});
+const props = withDefaults(
+	defineProps<AppButtonProps>(),
+	{
+		hasError: false,
+		errorMessage: "can't be empty",
+		variant: "default",
+		type: "input",
+		required: false,
+	}
+);
 
+const InputElem = defineComponent({
+	render() {
+		return h(props.type);
+	},
+});
 </script>
 <template>
-	<label class="block font-medium relative">
-		<input
-      v-if="type === 'input'"
-			type="text"
+	<label
+		class="flex font-medium relative w-full"
+	>
+		<InputElem
 			:aria-label="ariaLabel || label"
-			required
+			:required="required"
 			class="bg-transparent border-0 outline-none transition duration-300 w-full leading-[inherit] font-medium peer"
 			:class="{
 				input__error: hasError,
-				'text-dark-grey': variant === 'default',
-				'text-white': variant === 'custom',
+				[`text-dark-grey 
+        placeholder:text-dark-grey/50 
+        shadow-[0_1px_0_0_rgba(51,49,54,1)]
+        focus:shadow-[0_3px_0_0_rgba(51,49,54,1)]
+        valid:shadow-[0_3px_0_0_rgba(51,49,54,1)]
+      `]: variant === 'default',
+				[`text-white
+        placeholder:text-white/50 
+        shadow-[0_1px_0_0_rgba(255,255,255,1)]
+        focus:shadow-[0_3px_0_0_rgba(255,255,255,1)]
+        `]: variant === 'custom',
+				'valid:shadow-[0_3px_0_0_rgba(255,255,255,1)]': type === 'input'
 			}"
+			:name="name"
+			:placeholder="label ? '' : placeholder"
+			:rows="rows"
 		/>
 		<div
+			v-if="label"
 			class="label-text absolute cursor-text capitalize transition duration-300 mix-blend-normal leading-[inherit] font-medium peer-focus:text-dark-grey/40"
 			:class="{
 				'text-dark-grey/50':
 					variant === 'default',
 				'text-white/50': variant === 'custom',
-        '-translate-y-10 peer-focus:-translate-y-18 peer-valid:-translate-y-18': type === 'input'
+				'-translate-y-10 peer-focus:-translate-y-16 peer-valid:-translate-y-16':
+					type === 'input',
 			}"
 		>
 			{{ label }}
@@ -69,41 +95,21 @@ const props = withDefaults(defineProps<AppButtonProps>(), {
 </template>
 <style scoped lang="css">
 label {
-	padding-top: 26px;
+	padding-top: 24px;
 	font-size: 15px;
 	line-height: 26px;
 }
 label .label-text {
 	font-size: inherit;
 }
-label input {
-	padding: 8px 14px 12px 14px;
+label input,
+label textarea {
+	padding: 0px 14px 12px 14px;
 	font-size: inherit;
-	--tw-shadow: 0 1px 0px 0px rgba(51, 49, 54, 1);
-	--tw-shadow-colored: 0 1px 0px 0px
-		var(--tw-shadow-color);
-	box-shadow: var(
-			--tw-ring-offset-shadow,
-			0 0 #0000
-		),
-		var(--tw-ring-shadow, 0 0 #0000),
-		var(--tw-shadow);
 }
 
-label input:focus,
-label input:valid {
-	--tw-shadow: 0 3px 0px 0px rgba(51, 49, 54, 1);
-	--tw-shadow-colored: 0 1px 0px 0px
-		var(--tw-shadow-color);
-	box-shadow: var(
-			--tw-ring-offset-shadow,
-			0 0 #0000
-		),
-		var(--tw-ring-shadow, 0 0 #0000),
-		var(--tw-shadow);
-}
-
-label input:focus + .label-text {
+label input:focus + .label-text,
+label textarea:focus + .label-text {
 	font-size: 13px;
 }
 .input__error {

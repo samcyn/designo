@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import AppBrandLogo from "~/components/shared/AppBrandLogo.vue";
-import AppButton from "./shared/AppButton.vue";
-import AppLink from "./shared/AppLink.vue";
-import AppIcon from "./shared/AppIcon.vue";
+import AppButton from "~/components/shared/AppButton.vue";
+import AppLink from "~/components/shared/AppLink.vue";
+import AppIcon from "~/components/shared/AppIcon.vue";
 </script>
 <template>
 	<footer>
