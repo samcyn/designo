@@ -5,7 +5,7 @@ import AppOurRecordSection from "~/components/home-page/AppOurRecordSection.vue"
 import AppIcon from "~/components/shared/AppIcon.vue";
 </script>
 <template>
-	<div class="relative">
+	<div class="relative overflow-hidden">
 		<div class="relative z-10">
 			<app-hero />
 			<!-- modules -->

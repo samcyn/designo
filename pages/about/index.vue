@@ -3,7 +3,7 @@ import AppCardWithBanner from "~/components/shared/AppCardWithBanner.vue";
 import AppCitySkyline from "~/components/shared/AppCitySkyline.vue";
 </script>
 <template>
-	<div class="relative">
+	<div class="relative overflow-hidden">
 		<div class="relative z-10">
 			<div class="container">
 				<div class="-mx-6 md:mx-0">

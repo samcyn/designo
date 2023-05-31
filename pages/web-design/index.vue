@@ -4,7 +4,7 @@ import AppWebPortfolioSections from "~/components/web-design-page/AppWebPortfoli
 import AppOtherAppSection from "~/components/shared/AppOtherAppSection.vue";
 </script>
 <template>
-	<div class="relative">
+	<div class="relative overflow-hidden">
 		<div class="relative z-10">
 			<app-hero-mini
 				title="Web Design"

@@ -4,7 +4,7 @@ import AppGraphicPortfolioSections from "~/components/graphic-design-page/AppGra
 import AppOtherAppSection from "~/components/shared/AppOtherAppSection.vue";
 </script>
 <template>
-	<div class="relative">
+	<div class="relative overflow-hidden">
 		<div class="relative z-10">
 			<app-hero-mini
 				title="Graphic Design"

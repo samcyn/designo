@@ -3,7 +3,7 @@ import AppCitySkyline from "~/components/shared/AppCitySkyline.vue";
 import AppContactForm from "~/components/contact-page/AppContactForm.vue";
 </script>
 <template>
-	<div class="relative">
+	<div class="relative overflow-hidden">
 		<div class="relative z-10">
 			<app-contact-form />
 			<!-- skylines -->
