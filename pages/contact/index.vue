@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import AppInput from "~/components/shared/AppInput.vue";
 import AppButton from "~/components/shared/AppButton.vue";
+import AppCitySkyline from '~/components/shared/AppCitySkyline.vue';
 </script>
 <template>
 	<div class="container">
@@ -85,6 +86,8 @@ import AppButton from "~/components/shared/AppButton.vue";
 			</div>
 		</div>
 	</div>
+	<!-- skylines -->
+	<AppCitySkyline />
 </template>
 <style scoped lang="css">
 .overlay {
