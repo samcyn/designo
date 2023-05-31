@@ -63,7 +63,7 @@ const onInput = (e: Events['onInput']) => {
         shadow-[0_1px_0_0_rgba(255,255,255,1)]
         focus:shadow-[0_3px_0_0_rgba(255,255,255,1)]
         `]: variant === 'custom',
-				'valid:shadow-[0_3px_0_0_rgba(255,255,255,1)]': type === 'input'
+				// 'valid:shadow-[0_3px_0_0_rgba(255,255,255,1)]': type === 'input'
 			}"
 			:name="name"
 			:placeholder="label ? '' : placeholder"
