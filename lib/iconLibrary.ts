@@ -10,7 +10,9 @@ export enum IconEnums {
   close = 'Close',
   youtube = 'YouTube',
   pinterest = 'Pinterest',
-  caution = 'Caution'
+  caution = 'Caution',
+  'rectangle-left' = 'RectangleLeft',
+  'rectangle-right' = 'RectangleRight',
 }
 
 export type IconTypes = keyof typeof IconEnums;
@@ -58,6 +60,9 @@ const Pinterest = `<path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627
 
 const Caution = `<g fill="none" fill-rule="evenodd"><circle cx="10" cy="10" r="10" fill="transparent"/><path fill="currentColor" d="M11 14v2H9v-2h2zm0-9v7H9V5h2z"/></g>`;
 
+const RectangleLeft = `<path id="Rectangle" opacity="0.502255" d="M0 297C0 132.971 132.971 0 297 0H709C873.029 0 1006 132.971 1006 297C1006 461.029 873.029 594 709 594H0V297Z" fill="currentColor"/>`;
+const RectangleRight = `<path opacity="0.502255" d="M1006 297C1006 461.029 873.029 594 709 594H297C132.971 594 0 461.029 0 297C0 132.971 132.971 0 297 0H1006V297Z" fill="currentColor"/>`;
+
 const IconsLibrary: Record<IconTypes, string> = {
   hamburger: Hamburger,
   cart: Cart,
@@ -70,7 +75,9 @@ const IconsLibrary: Record<IconTypes, string> = {
   close: Close,
   youtube: YouTube,
   pinterest: Pinterest,
-  caution: Caution
+  caution: Caution,
+  'rectangle-left': RectangleLeft,
+  'rectangle-right': RectangleRight
 };
 
 export default IconsLibrary;

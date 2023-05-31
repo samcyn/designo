@@ -4,36 +4,50 @@ import AppWebPortfolioSections from "~/components/web-design-page/AppWebPortfoli
 import AppOtherAppSection from "~/components/shared/AppOtherAppSection.vue";
 </script>
 <template>
-	<app-hero-mini
-		title="Web Design"
-		description="We build websites that serve as powerful marketing tools and bring memorable brand experiences."
-	>
-		<template #overlays>
-			<div
-				class="overlaysApp absolute grid grid-cols-3 transition group-hover:translate-x-2"
+	<div class="relative">
+		<div class="relative z-10">
+			<app-hero-mini
+				title="Web Design"
+				description="We build websites that serve as powerful marketing tools and bring memorable brand experiences."
 			>
+				<template #overlays>
+					<div
+						class="overlaysApp absolute grid grid-cols-3 transition group-hover:translate-x-2"
+					>
+						<div
+							class="overlaysApp__circle -rotate-90"
+						></div>
+						<div
+							class="overlaysApp__circle -rotate-180"
+						></div>
+						<div
+							class="overlaysApp__circle rotate-90"
+						></div>
+						<div
+							class="overlaysApp__circle col-start-2 -rotate-180"
+						></div>
+						<div
+							class="overlaysApp__circle rotate-90"
+						></div>
+					</div>
+				</template>
+			</app-hero-mini>
+			<!-- portfolios -->
+			<app-web-portfolio-sections />
+			<!-- other apps -->
+			<app-other-app-section />
+		</div>
+		<!-- overlay -->
+		<div
+			class="absolute w-full top-[126px] z-1 hidden xl:block"
+		>
+			<div class="container">
 				<div
-					class="overlaysApp__circle -rotate-90"
-				></div>
-				<div
-					class="overlaysApp__circle -rotate-180"
-				></div>
-				<div
-					class="overlaysApp__circle rotate-90"
-				></div>
-				<div
-					class="overlaysApp__circle col-start-2 -rotate-180"
-				></div>
-				<div
-					class="overlaysApp__circle rotate-90"
+					class="rectangle-overlay rectangle-overlayLeft"
 				></div>
 			</div>
-		</template>
-	</app-hero-mini>
-	<!-- portfolios -->
-	<app-web-portfolio-sections />
-	<!-- other apps -->
-	<app-other-app-section />
+		</div>
+	</div>
 </template>
 <style scoped lang="css">
 .overlaysApp {

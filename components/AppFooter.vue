@@ -7,7 +7,7 @@ import AppIcon from "~/components/shared/AppIcon.vue";
 const route = useRoute();
 </script>
 <template>
-	<footer>
+	<footer class="relative z-10">
 		<div v-if="route.path !== '/contact'" class="footer__top container relative">
 			<div
 				class="footer__card relative bg-peach py-16 px-6 md:p-14 xl:py-18 xl:px-24 overflow-hidden group"

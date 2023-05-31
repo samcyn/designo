@@ -1,11 +1,25 @@
 <script setup lang="ts">
-import AppCitySkyline from '~/components/shared/AppCitySkyline.vue';
-import AppContactForm from '~/components/contact-page/AppContactForm.vue';
+import AppCitySkyline from "~/components/shared/AppCitySkyline.vue";
+import AppContactForm from "~/components/contact-page/AppContactForm.vue";
 </script>
 <template>
-	<app-contact-form />
-	<!-- skylines -->
-	<AppCitySkyline />
+	<div class="relative">
+		<div class="relative z-10">
+			<app-contact-form />
+			<!-- skylines -->
+			<AppCitySkyline />
+		</div>
+		<!-- overlay -->
+		<div
+			class="absolute w-full -bottom-40 z-1 hidden xl:block"
+		>
+			<div class="container">
+				<div
+					class="rectangle-overlay rectangle-overlayRight rotate-180"
+				></div>
+			</div>
+		</div>
+	</div>
 </template>
 <style scoped lang="css">
 .overlay {
