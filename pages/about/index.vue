@@ -7,7 +7,7 @@ import AppCitySkyline from '~/components/shared/AppCitySkyline.vue';
 		<div class="-mx-6 md:mx-0">
 			<!--  -->
 			<app-card-with-banner
-				class="md:mb-30"
+				class="md:mb-30 xl:mb-40"
 				title="About Us"
 				description="
         Founded in 2010, we are a creative agency that produces lasting results for 
@@ -61,7 +61,7 @@ import AppCitySkyline from '~/components/shared/AppCitySkyline.vue';
 	<AppCitySkyline />
 	
 	<div class="container">
-		<div class="-mx-6 md:mx-0 pb-30">
+		<div class="-mx-6 md:mx-0 pb-30 xl:pb-40">
 			<app-card-with-banner
 				title="The real deal"
 				type="custom"
