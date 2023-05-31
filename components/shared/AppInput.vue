@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Events} from 'vue';
 import AppIconButton from "~/components/shared/AppIconButton.vue";
 
 interface AppButtonProps {
@@ -7,11 +8,12 @@ interface AppButtonProps {
 	hasError?: boolean;
 	variant?: "default" | "custom";
 	ariaLabel?: string;
-	type?: string;
+	type?: 'input'|'textarea';
 	required?: boolean;
 	placeholder?: string;
 	rows?: number;
 	name: string;
+	modelValue?: string
 }
 
 const props = withDefaults(
@@ -25,11 +27,20 @@ const props = withDefaults(
 	}
 );
 
+const emit = defineEmits<{
+	(event: 'update:modelValue', val: string): void
+}>()
+
 const InputElem = defineComponent({
 	render() {
 		return h(props.type);
 	},
 });
+
+const onInput = (e: Events['onInput']) => {
+	emit('update:modelValue', (e.target as HTMLInputElement).value);
+}
+
 </script>
 <template>
 	<label
@@ -57,6 +68,8 @@ const InputElem = defineComponent({
 			:name="name"
 			:placeholder="label ? '' : placeholder"
 			:rows="rows"
+			:value="modelValue"
+			@input="onInput"
 		/>
 		<div
 			v-if="label"
@@ -72,7 +85,7 @@ const InputElem = defineComponent({
 			{{ label }}
 		</div>
 		<div
-			v-if="hasError"
+			v-if="hasError && !modelValue"
 			class="input__error-container absolute bottom-3 right-0 font-normal flex items-center gap-2"
 			:class="{
 				'text-dark-grey': variant === 'default',

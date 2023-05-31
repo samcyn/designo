@@ -1,6 +1,33 @@
 <script setup lang="ts">
+import { Events } from 'vue';
 import AppInput from "~/components/shared/AppInput.vue";
 import AppButton from "~/components/shared/AppButton.vue";
+
+type FormType = {
+  name: boolean;
+  email: boolean;
+  phone: boolean;
+  message: boolean;
+}
+const errorBag = reactive({
+  name: false,
+  email: false,
+  phone: false,
+  message: false
+});
+
+const form = reactive({
+	name: "",
+	email: "",
+  phone: '',
+  message: ''
+});
+
+const onSubmit = (e: Events['onSubmit']) => {
+  e.preventDefault();
+  console.log('submitting...')
+}
+
 </script>
 <template>
 	<div class="container">
@@ -29,30 +56,35 @@ import AppButton from "~/components/shared/AppButton.vue";
 					</p>
 				</div>
 				<form
+          @submit="onSubmit"
 					class="mt-6 md:mt-4 xl:mt-0 xl:w-[380px]"
 				>
 					<div
 						class="flex flex-col mb-10 md:mb-6"
 					>
 						<AppInput
+						  v-model="form.name"
 							name="name"
-							required
 							variant="custom"
 							placeholder="Name"
+              :has-error="errorBag.name"
 						/>
 						<AppInput
+							v-model="form.email"
 							name="email"
-							required
 							variant="custom"
 							placeholder="Email"
+              :has-error="errorBag.email"
 						/>
 						<AppInput
+							v-model="form.phone"
 							name="phone"
-							required
 							variant="custom"
 							placeholder="Phone"
+              :has-error="errorBag.phone"
 						/>
 						<AppInput
+							v-model="form.message"
 							name="message"
 							variant="custom"
 							type="textarea"
