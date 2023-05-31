@@ -2,11 +2,17 @@
 import AppBrandLogo from "~/components/shared/AppBrandLogo.vue";
 import AppIconButton from "~/components/shared/AppIconButton.vue";
 
+const route = useRoute();
+
 const expandClass = ref(false);
 
 const onExpand = () => {
 	expandClass.value = !expandClass.value;
 };
+// close when route changes
+watch(() => route.path, () => {
+	expandClass.value = false;
+});
 </script>
 
 <template>

@@ -3,10 +3,12 @@ import AppBrandLogo from "~/components/shared/AppBrandLogo.vue";
 import AppButton from "~/components/shared/AppButton.vue";
 import AppLink from "~/components/shared/AppLink.vue";
 import AppIcon from "~/components/shared/AppIcon.vue";
+
+const route = useRoute();
 </script>
 <template>
 	<footer>
-		<div class="footer__top container relative">
+		<div v-if="route.path !== '/contact'" class="footer__top container relative">
 			<div
 				class="footer__card relative bg-peach py-16 px-6 md:p-14 xl:py-18 xl:px-24 overflow-hidden group"
 			>

@@ -25,6 +25,11 @@ const form = reactive({
 
 const onSubmit = (e: Events['onSubmit']) => {
   e.preventDefault();
+	for (const key in form) {
+		if (!form[key as keyof FormType]) {
+			errorBag[key as keyof FormType] = true;
+		}
+	}
   console.log('submitting...')
 }
 

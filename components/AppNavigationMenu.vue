@@ -9,7 +9,9 @@ type Props = {
 	linkClassName?: string
 };
 
-defineProps<Props>();
+withDefaults(defineProps<Props>(), {
+	activeclass: '!text-peach'
+})
 </script>
 
 <template>
