@@ -6,7 +6,7 @@ import AppButton from "~/components/shared/AppButton.vue";
 	<div class="container">
 		<div class="-mx-6 md:mx-0">
 			<div
-				class="bg-peach py-18 px-6 md:px-[58px] xl:py-[54px] xl:px-24 md:rounded-[15px] xl:flex xl:gap-[95px] xl:items-center"
+				class="relative overflow-hidden bg-peach py-18 px-6 md:px-[58px] xl:py-[54px] xl:px-24 md:rounded-[15px] xl:flex xl:gap-[95px] xl:items-center"
 			>
 				<div
 					class="text-center md:text-left text-white xl:flex-1"
@@ -28,8 +28,12 @@ import AppButton from "~/components/shared/AppButton.vue";
 						line.
 					</p>
 				</div>
-				<form class="mt-6 md:mt-4 xl:mt-0 xl:w-[380px]">
-					<div class="flex flex-col mb-10 md:mb-6">
+				<form
+					class="mt-6 md:mt-4 xl:mt-0 xl:w-[380px]"
+				>
+					<div
+						class="flex flex-col mb-10 md:mb-6"
+					>
 						<AppInput
 							name="name"
 							required
@@ -64,7 +68,36 @@ import AppButton from "~/components/shared/AppButton.vue";
 						>
 					</div>
 				</form>
+				<!-- overlays -->
+				<div
+					class="hidden md:block overlay absolute md:-top-[83px] md:-left-[121px] xl:left-0 xl:-top-40"
+				></div>
+				<div
+					class="md:hidden w-[584px] absolute grid grid-cols-2 transition group-hover:translate-x-2 -left-[92px] top-0"
+				>
+					<div
+						class="overlaysApp__circle -rotate-90"
+					></div>
+					<div
+						class="overlaysApp__circle -rotate-180"
+					></div>
+				</div>
 			</div>
 		</div>
 	</div>
 </template>
+<style scoped lang="css">
+.overlay {
+	height: 640px;
+	width: 640px;
+	border-radius: 100%;
+	background: linear-gradient(
+		90deg,
+		rgba(93, 2, 2, 0.0001) 0%,
+		rgba(93, 2, 2, 0.497569) 100%
+	);
+	mix-blend-mode: normal;
+	opacity: 0.31;
+	transform: matrix(0, 1, 1, 0, 0, 0);
+}
+</style>
