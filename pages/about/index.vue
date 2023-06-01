@@ -109,9 +109,9 @@ import AppCitySkyline from "~/components/shared/AppCitySkyline.vue";
 			class="absolute w-full bottom-[548px] z-1 hidden xl:block"
 		>
 			<div class="container">
-				<div
-					class="rectangle-overlay rectangle-overlayRight -right-[560px] rotate-180"
-				></div>
+				<div class="overflow-hidden relative ml-auto w-[610px] -right-[165px]">
+					<div class="rectangle-overlay rectangle-overlayRight  left-0 right-0 rotate-180"></div>
+				</div>
 			</div>
 		</div>
 	</div>
