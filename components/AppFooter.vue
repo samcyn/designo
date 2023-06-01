@@ -57,7 +57,8 @@ const route = useRoute();
 		</div>
 
 		<div
-			class="footer__bottom bg-black pb-16 md:pb-20 xl:pb-18"
+			class="bg-black pb-16 md:pb-20 xl:pb-18"
+			:class="route.path === '/contact' ? 'pt-16 md:pt-20 xl:pt-18' : 'footer__bottom'"
 		>
 			<div class="container">
 				<!-- menus -->
